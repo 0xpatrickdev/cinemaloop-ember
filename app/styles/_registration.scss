@@ -1,0 +1,90 @@
+header{
+  .logo{
+    margin-top: 30px;
+    height: 79px;
+    width: 477px;
+  }
+  h2{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin-top: 5px 0 10px 0;
+  }
+  p{
+    color: #fff;
+    font-weight: 100;
+    font-size: 1.5em;
+    margin-top: 40px;
+  }
+}
+
+
+footer > * {
+  background-color: #000;
+}
+
+p, label, a  {
+  font-weight: 500;
+}
+
+/** New Styles **/
+
+.social-btn {
+  padding: 1rem;
+    button.btn.btn-default {
+        width: 100%;
+    }
+}
+
+$bs-height-base: ($line-height-computed + $padding-base-vertical * 2) !default;
+@mixin btn-social($color-bg, $color: #fff) {
+    background-color: $color-bg;
+    @include button-variant($color, $color-bg, rgba(0, 0, 0, .2));
+}
+
+.btn-facebook {
+    @include btn-social(#3b5998);
+}
+
+.btn-google {
+    @include btn-social(#dd4b39);
+}
+
+.btn-twitter {
+    @include btn-social(#55acee);
+}
+
+.btn-social {
+    text-align: left;
+    >:first-child {
+        width: $bs-height-base;
+        border-right: 1px solid #eee;
+        padding: 0 2px;
+    }
+    >:last-child {
+        width: $bs-height-base;
+        margin: 0 2px;
+    }
+}
+
+
+/** New Styles **/
+
+.social-btn {
+  padding: 1rem;
+    button.btn.btn-default {
+        width: 100%;
+    }
+}
+
+button {
+    width: 50%;
+    margin: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+button.custom-btn {
+    width: 50%;
+    margin: 1.5rem;
+    margin-bottom: 1rem;
+}

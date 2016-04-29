@@ -1,0 +1,39 @@
+<div class="row row-centered">
+  <div class="col-md-8 col-centered">
+    <img src="/images/login/confer_white.png" class="img-responsive center-block" alt="username logo" />
+
+    <p>
+      Please type your username and password
+    </p>
+    <div class="control-group">
+      <form {{action 'authenticate' on='submit'}}>
+        <div class="form-group">
+          <label for="identification">Email</label>
+          {{input class="form-control" id='identification' placeholder='Enter username' value=identification}}
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+
+          {{input class="form-control" id='password' placeholder='Enter Password' type='password' value=password}}
+        </div>
+        <button type="submit">Continue</button>
+
+
+        {{input id='password' placeholder='Enter Password' type='password' value=password}} {{input type="checkbox" name="isAdmin" checked=isAdmin }}
+        <label for="checkbox">terms of service</label>
+
+
+        {{#if errorMessage}}
+          <p>{{errorMessage}}</p>
+          <!-- Terms of service must be checked before proceeding -->
+        {{/if}}
+
+        {{#if tosAgreement}}
+          {{input type="checkbox" name="isAdmin" checked=isAdmin }}
+          <label for="checkbox">Terms of service</label>
+        {{else}}
+          <a class="text-center">Click for the Temrs of Service</a>
+        {{/if}}      </form>
+    </div>
+  </div>
+</div>

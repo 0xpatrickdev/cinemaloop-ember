@@ -1,0 +1,55 @@
+<!-- Registration Flow Page 2-->
+<div class="row">
+  <div class="col-md-6">
+    <div class="social-buttons">
+      <p clas="lead">QUICK SIGN UP</p>
+      <p>
+        We will never post to your account
+      </p>
+      <!-- FaceBook -->
+      <a class="btn btn-block btn-social btn-facebook">
+        <span>f</span> <span>Sign in with Facebook</span>
+      </a>
+      <!-- Google Plus -->
+      <a class="btn btn-block btn-social btn-google">
+        <span>g</span> <span>Sign in with Google</span>
+      </a>
+      <!-- Twitter Button -->
+      <a class="btn btn-block btn-social btn-twitter">
+        <span>t</span> <span>Sign in with Twitter</span>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Name</label>
+      {{one-way-input type="text" class="form-control" placeholder="Your Name" value=model.name update=(action (mut model.name))}}
+      <label>E-mail Address:</label>
+      {{one-way-input type="email" class="form-control" placeholder="yourname@hotmail.com" value=model.email update=(action (mut model.email))}}
+      <label>Date Of Birth:</label>
+      {{one-way-input type="text" class="form-control" placeholder="Male" value=model.dateOfBirth update=(action (mut model.dateOfBirth))}}
+      <ul>
+        <li class="list-unstyled">
+          {{radio-button value='Male' checked=model.gender}}
+          <label>Male</label>
+        </li>
+        <li class="list-unstyled">
+          {{radio-button value='Female' checked=model.gender}}
+          <label>Female</label>
+        </li>
+      </ul>
+      <div class="row row-centered">
+        <div class="col-md-6 col-centered">
+          <button {{action 'save'}} class="btn btn-submit user-btn">Send Form</button>
+        </div>
+      </div>
+      <div class="row row-centered">
+        <button class="btn btn-default btn-lg custom-btn">
+          {{#link-to 'signup.3'}}
+            Continue
+          {{/link-to}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

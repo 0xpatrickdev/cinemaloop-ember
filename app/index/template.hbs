@@ -1,0 +1,28 @@
+<!-- app/pods/index/template.hbs -->
+
+<header>
+  <div class="container">
+    <div class="row row-centered">
+      <a href="#" class="img-responsive"><img src="/images/index/cinemaLogo.png" alt="" /></a>
+      <h2 id="tagline">Where movies fans meet</h2>
+      <hr width="80%" />
+      <p>
+        Currently looking for movie companions?
+      </p>
+    </div>
+  </div>
+</header>
+
+<div class="row row-centered">
+  <button type="button" class="btn btn-primary btn-lg btn-index">
+    {{#link-to 'login'}}Log In{{/link-to}}
+  </button>
+  <button type="button" class="btn btn-primary btn-lg btn-index">
+    {{#link-to 'signup.1'}}
+      Register
+    {{/link-to}}
+  </button>
+</div>
+<div class="container">
+{{outlet}}
+</div>
